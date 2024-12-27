@@ -26,4 +26,6 @@ INSTALLED_APPS = (
     'django_gears',
 )
 
+TEST_RUNNER='django.test.simple.DjangoTestSuiteRunner'
+
 GEARS_ROOT = os.path.join(TESTS_DIR, 'static')
