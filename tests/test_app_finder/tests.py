@@ -40,7 +40,7 @@ class AppFinderTests(TestCase):
 
     def test_finder(self):
         finder = AppFinder()
-        self.assertItemsEqual(finder.list('js'), (
+        self.assertItemsEqual(finder.list('js/*'), (
             ('js/test_app_finder.js', os.path.join(APP_ASSETS, 'js', 'test_app_finder.js')),
         ))
 
