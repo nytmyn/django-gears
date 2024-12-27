@@ -2,7 +2,7 @@
 
 set -e
 
-export PYTHONPATH=$PWD:$PWD/..:$PYTHONPATH
+export PYTHONPATH=$(readlink -f $PWD/..):$PYTHONPATH
 
 django-admin.py test --settings=tests.settings_get_asset_handler
 django-admin.py test --settings=tests.settings_get_finder
