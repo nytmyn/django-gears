@@ -1,4 +1,4 @@
-from __future__ import absolute_import
+
 from django.template import Node, Library, TemplateSyntaxError
 from gears.assets import build_asset
 from ..settings import environment, GEARS_URL, GEARS_DEBUG
@@ -42,12 +42,12 @@ class AssetTagNode(Node):
 
 class CSSAssetTagNode(AssetTagNode):
 
-    template = u'<link rel="stylesheet" href="%s%%s">' % GEARS_URL
+    template = '<link rel="stylesheet" href="%s%%s">' % GEARS_URL
 
 
 class JSAssetTagNode(AssetTagNode):
 
-    template = u'<script src="%s%%s"></script>' % GEARS_URL
+    template = '<script src="%s%%s"></script>' % GEARS_URL
 
 
 @register.tag

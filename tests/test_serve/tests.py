@@ -1,4 +1,4 @@
-from __future__ import with_statement
+
 
 import codecs
 import os
@@ -38,8 +38,8 @@ class ServeViewTests(TestCase):
 
     def test_returns_asset(self):
         response = self.get_response('js/script.js')
-        self.assertEqual(response.content, self.get_fixture('output.js'))
+        self.assertEqual(response.content.decode('utf-8'), self.get_fixture('output.js'))
 
     def test_returns_processed_source_if_body_requested(self):
         response = self.get_response('js/script.js', {'body': 1})
-        self.assertEqual(response.content, self.get_fixture('output_body.js'))
+        self.assertEqual(response.content.decode('utf-8'), self.get_fixture('output_body.js'))

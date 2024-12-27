@@ -43,8 +43,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Django Gears'
-copyright = u'2014, Gears'
+project = 'Django Gears'
+copyright = '2014, Gears'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -196,8 +196,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'DjangoGears.tex', u'Django Gears Documentation',
-   u'Gears', 'manual'),
+  ('index', 'DjangoGears.tex', 'Django Gears Documentation',
+   'Gears', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -226,8 +226,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'djangogears', u'Django Gears Documentation',
-     [u'Gears'], 1)
+    ('index', 'djangogears', 'Django Gears Documentation',
+     ['Gears'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -240,8 +240,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'DjangoGears', u'Django Gears Documentation',
-   u'Gears', 'DjangoGears', 'Django and Gears integration',
+  ('index', 'DjangoGears', 'Django Gears Documentation',
+   'Gears', 'DjangoGears', 'Django and Gears integration',
    'Miscellaneous'),
 ]
 

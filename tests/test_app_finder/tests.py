@@ -1,4 +1,4 @@
-from __future__ import with_statement
+
 
 import codecs
 import os
@@ -40,10 +40,10 @@ class AppFinderTests(TestCase):
 
     def test_finder(self):
         finder = AppFinder()
-        self.assertItemsEqual(finder.list('js/*'), (
+        self.assertCountEqual(finder.list('js/*'), (
             ('js/test_app_finder.js', os.path.join(APP_ASSETS, 'js', 'test_app_finder.js')),
         ))
 
     def test_serve(self):
         response = self.get_response('js/test_app_finder.js')
-        self.assertEqual(response.content, self.get_app_asset('js/test_app_finder.js'))
+        self.assertEqual(response.content.decode('utf-8'), self.get_app_asset('js/test_app_finder.js'))
